@@ -1,0 +1,31 @@
+---
+# name of the workflow
+name: myfirst github action workflow  
+# when to execute the workflow - trigger - manual trigger
+on: workflow_dispatch
+# jobs to be executed in the workflow
+jobs: 
+  # name of the Job. It can be anything. It is for our reference.
+  job1: 
+    # key: value pair to specify the runner/agent where the job will run
+    runs-on: ubuntu-latest  # value is given by GitHub. We have to choose from the given options. 
+    steps: # what is to be executed in the job 
+      - name: Linux commands to execute in the job
+        run: 
+          echo "Hello World"
+      - name: More linux command to execute in the job
+        run: |
+          echo "Welcome to DevOps"
+          echo "Welcome to GitHub Actions"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Linux commands to execute in the job
+        run: 
+          echo "Hello World"
+      - name: More Linux command to execute in the job
+        run: |
+         mkdir mydemo
+         cd mydemo
+         echo "Welcome to DevOps" > welcome.txt
+         echo "Welcome to GitHub Actions" >> welcome.txt
