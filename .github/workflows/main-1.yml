@@ -1,6 +1,6 @@
 ---
 # name of the workflow
-name: myfirst github action workflow  
+name: mysecond github action workflow  
 # when to execute the workflow - trigger - manual trigger
 on: workflow_dispatch
 # jobs to be executed in the workflow
